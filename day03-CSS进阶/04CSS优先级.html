@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS优先级</title>
+    <style>
+        /* id选择器 */
+        #test {
+            color: yellow;
+        }
+
+        /* 类选择器 */
+        .box {
+            color: blue;
+        }
+
+        /* 标签选择器 */
+        div {
+            color: green;
+        }
+
+        /* 通配符选择器 */
+        * {
+            color: red !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="test" style="color: aqua;">div标签</div>
+</body>
+
+</html>

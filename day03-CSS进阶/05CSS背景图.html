@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景图</title>
+    <style>
+        div {
+            width: 500px;
+            height: 400px;
+            background-color: red;
+            background-image: url(./img/1.png);
+            /* 不平铺 */
+            background-repeat: no-repeat;
+            /* 平铺 */
+            /* background-repeat: repeat; */
+            /* 水平方向平铺 */
+            /* background-repeat: repeat-x; */
+            /* 垂直方向平铺 */
+            /* background-repeat: repeat-y; */
+
+            /* 左上角 */
+            /* 
+            background-position: 0 0;
+            background-position: left top; 
+            background-position: right bottom; 
+            */
+
+            /* 水平：正数向左，负数向右 */
+            /* background-position: 100px 0; */
+            /* background-position: -100px 0; */
+
+            /* 垂直：正数向下，负数向上 */
+            /* background-position: 0 100px; */
+            /* background-position: 0 -100px; */
+
+            /* 特殊写法 */
+            /* background-position: bottom left; */
+
+            /* 关键字写一个，另一个方向居中 */
+            /* background-position: bottom; */
+            /* background-position: left; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>div 标签</div>
+</body>
+
+</html>

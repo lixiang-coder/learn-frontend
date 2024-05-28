@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器</title>
+
+    <style>
+        /* 后代选择器：选中父级中所有后代的这个标签 */
+        /* 
+        div span {
+            color: red;
+        } */
+
+        /* 子代选择器：选中父级中子代的这个标签 */
+        /* 
+        div>span {
+            color: red;
+        } */
+
+        /* 并集选择器：选中多组标签设置相同的样式 */
+        /* 
+        div,
+        p,
+        span {
+            color: red;
+        } */
+
+        /* 交集选择器：选中同时满足多个条件的元素 */
+        /* 
+        p.box {
+            color: red;
+        } */
+
+        /* 伪类选择器： */
+        /* 
+        a:hover {
+            color: red;
+        }
+
+        .box:hover {
+            color: green;
+        } */
+
+        /* 超链接伪类 */
+        /* 工作中，一个 a 标签选择器设置超链接的样式， hover状态特殊设置 */
+        a {
+            color: red;
+        }
+
+        a:hover {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <span>span 标签</span>
+
+    <p class="box">p标签，使用了类选择器</p>
+
+    <div>
+        <span>这是div的儿子</span>
+        <p>
+            <span>孙子 span</span>
+        </p>
+    </div>
+
+    <a href="#">a 标签，超链接</a>
+
+</body>
+
+</html>
