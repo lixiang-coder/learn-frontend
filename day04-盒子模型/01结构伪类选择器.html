@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结构伪类选择器</title>
+    <style>
+        /* 选第一个 */
+        li:first-child {
+            background-color: #FF0000;
+        }
+
+        /* 选最后一个 */
+        li:last-child {
+            background-color: #8B00FF;
+        }
+
+        /* 选任意一个 */
+        li:nth-child(2) {
+            background-color: #FF7F00;
+        }
+
+        li:nth-child(3) {
+            background-color: #FFFF00;
+        }
+
+        li:nth-child(4) {
+            background-color: #00FF00;
+        }
+
+        li:nth-child(5) {
+            background-color:  #00FFFF;
+        }
+
+        li:nth-child(6) {
+            background-color:  #0000FF;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>li 1</li>
+        <li>li 2</li>
+        <li>li 3</li>
+        <li>li 4</li>
+        <li>li 5</li>
+        <li>li 6</li>
+        <li>li 8</li>
+    </ul>
+</body>
+
+</html>

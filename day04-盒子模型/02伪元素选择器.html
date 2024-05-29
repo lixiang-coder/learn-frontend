@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪元素选择器</title>
+    <style>
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+
+        /* 必须设置 content:属性，用来 设置伪元素的内容，如果没有内容，则引号留空即可 */
+        div::before {
+            content: "老鼠";
+        }
+
+        div::after {
+            content: "大米";
+        }
+    </style>
+</head>
+<body>
+    <div>爱</div>
+</body>
+</html>
