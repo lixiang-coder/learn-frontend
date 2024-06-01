@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 120px;
+            background-color: pink;
+            display: flex;
+
+            /* 修改主轴的方向从水平变成垂直 */
+            flex-direction: column;
+
+            /* 主轴在垂直，视觉效果：垂直居中 */
+            justify-content: center;
+
+            /* 侧轴在水平， 视觉效果：水平居中 */
+            align-items: center;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/1.png" alt="">
+        <span>媒体</span>
+    </div>
+</body>
+</html>

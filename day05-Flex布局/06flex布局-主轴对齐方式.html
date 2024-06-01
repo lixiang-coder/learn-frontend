@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 300px;
+            border: 1px solid #000;
+            display: flex;
+            /* justify-content: flex-start;    默认的主轴对齐方式 */
+            /* justify-content: flex-end;    从终点对齐 */
+            /* justify-content: center;    居中对齐 */
+            /* justify-content: space-between; 盒子间留下空白 */
+            /* justify-content: space-around;  盒子两侧留下空白 */
+            /* justify-content: space-evenly;      盒子与容器之间的间距相等 */
+        }
+
+        .box div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+
+</html>
