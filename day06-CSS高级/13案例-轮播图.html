@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .banner {
+            position: relative;
+            margin: 100px auto;
+            width: 564px;
+            height: 315px;
+            /* background-color: pink; */
+            /* 溢出隐藏 */
+            overflow: hidden;
+        }
+
+        /* 图 */
+        .banner img {
+            width: 564px;
+            border-radius: 12px;
+            vertical-align: middle;
+        }
+
+        .banner li {
+            /* 一行显示 */
+            display: flex;
+        }
+
+        .banner .prev,
+        .banner .next {
+            /* 隐藏箭头 */
+            display: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            color: aliceblue;
+            line-height: 30px;
+        }
+
+        /* 鼠标滑过banner区域，箭头显示 */
+        .banner:hover .prev,
+        .banner:hover .next {
+            display: block;
+        }
+
+        .banner .prev {
+            left: 0px;
+            border-radius: 0px 15px 15px 0px;
+        }
+
+        .banner .next {
+            right: 0px;
+            border-radius: 15px 0px 0px 15px;
+            text-align: center;
+        }
+
+        /* 圆点 */
+        .banner ol {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 13px;
+            background-color: rgba(255, 255, 255, 0.3);
+            display: flex;
+            border-radius: 10px;
+        }
+
+        .banner ol li {
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+            /* 鼠标小手效果 */
+            cursor: pointer;
+        }
+
+        .banner ol .active {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <!-- 图：ul > li -->
+        <ul>
+            <li><a href="#"><img src="./img/banner1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/banner2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/banner3.jpg" alt=""></a></li>
+        </ul>
+
+        <!-- 箭头 -->
+        <!-- 上一张 prev -->
+        <a href="#" class="prev">
+            <i class="iconfont icon-arrow-double-left"></i>
+        </a>
+        <!-- 上一张 next -->
+        <a href="#" class="next">
+            <i class="iconfont icon-arrow-double-right"></i>
+        </a>
+
+        <!-- 圆点 -->
+        <ol>
+            <li></li>
+            <li class="active"></li>
+            <li></li>
+        </ol>
+    </div>
+</body>
+
+</html>
