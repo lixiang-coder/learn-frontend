@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 第一步：将资料中vue.js文件导入到项目中 -->
+    <!-- 第二步：然后编写<script>标签来引入vue.js文件 -->
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <!-- 第四步：在html区域编写视图 -->
+    <div id="app">
+        <input type="text" v-model="message">
+        <!-- 插值表达式：用来将vue对象中定义的model展示到页面上的
+                    内容可以是：1.变量 2.三元运算符 3.函数调用 4.算术运算 -->
+        {{message}}
+    </div>
+</body>
+<script>
+    // 第三步：在js代码区域定义vue对象
+    new Vue({
+        el: "#app",      //vue接管区域
+        data: {
+            message: "hello Vue"
+        }
+    })
+</script>
+
+</html>
