@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //创建字符串对象两种方式：
+    //var str = new String("Hello String");
+    var str = "  Hello String    ";
+
+    console.log(str);
+
+    /* String属性和方法：
+            1.属性
+                length：字符串的长度
+            2.方法：
+                1.charAt()：    返回在指定位置的字符。
+                2.indexOf()：   检索字符串。
+                3.trim()：      去除字符串两边的空格
+                4.substring()： 提取字符串中两个指定的索引号之间的字符。开始索引, 结束索引 (含头不含尾)
+    */
+    
+
+    //length
+    console.log(str.length);
+
+    //charAt
+    console.log(str.charAt(4));
+
+    //indexOf
+    console.log(str.indexOf("lo"));
+
+    //trim
+    var s = str.trim();
+    console.log(s.length);
+
+    //substring(start,end) --- 开始索引, 结束索引 (含头不含尾)
+    console.log(s.substring(0, 5));
+
+</script>
+
+</html>

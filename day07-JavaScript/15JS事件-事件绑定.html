@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 方式1：通过html标签中的事件属性进行绑定 -->
+    <input type="button" id="btn1" value="事件绑定1" onclick="on()">
+
+    <!-- 方式2：通过DOM中Element元素的事件属性进行绑定 -->
+    <input type="button" id="btn2" value="事件绑定2">
+</body>
+
+<script>
+    function on() {
+        alert("按钮1被点击了...");
+    }
+
+    document.getElementById('btn2').onclick = function () {
+        alert("按钮2被点击了...");
+    }
+
+</script>
+
+</html>

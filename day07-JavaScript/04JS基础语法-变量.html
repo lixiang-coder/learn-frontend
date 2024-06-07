@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS基础语法-变量</title>
+</head>
+
+<body>
+</body>
+
+<script>
+    // JavaScript 是一门弱类型语言，变量可以存放不同类型的值
+    var a = 10;
+    a = "张三";
+    alert("a = " + a)
+
+    // 1.变量的作用域比较大，全局变量
+    // 2.可以重复定义
+    {
+        var x = 1;
+        var x = "A";
+    }
+    alert("x = " + x)
+
+
+    // 1. let 关键字定义的是局部变量
+    // 2. let 关键字不允许重复定义
+    {
+        let y = 1;
+        // let y = "张三" 会报错
+        alert("y = " + y)
+    }
+    //alert("y = " + y) 获取不到let y的值
+
+
+    // 1.const关键字用来声明常量
+    const pi = 3.14;
+    // pi = 3.15; 会报错，常量的值不能更改
+    alert("pi = " + pi)
+
+
+</script>
+
+</html>

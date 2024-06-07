@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // 定义数组方式一： var 变量名 = new Array(元素列表); 
+    var arr = new Array(1, 2, 3, 4); 	//1,2,3,4 是存储在数组中的数据（元素）
+    console.log(arr);
+    console.log(arr[0]);
+
+    // 定义数组方式二： var 变量名 = [ 元素列表 ]; 
+    var arr = [1, 2, 3, 4]; 	//1,2,3,4 是存储在数组中的数据（元素）
+    console.log(arr);
+    console.log(arr[0]);
+
+    //数组的特点：长度可变 类型可变
+    arr[10] = 50;
+
+    console.log(arr[10]);
+    console.log(arr[9]);    //undefined
+    console.log(arr[8]);    //undefined
+
+    // 集合存入的类型可以不一致
+    arr[9] = "A";
+    arr[8] = true;
+    console.log(arr);
+
+    /* 数组的属性和方法：
+            1.length：for循环将所有元素遍历出来
+            2.forEach：只会将有值的元素遍历出来
+            3.push()：可以添加多个元素到数组末尾
+            4.splice(p1,p2)：
+                参数1：表示从哪个索引位置删除
+                参数2：表示删除元素的个数
+    */
+    console.log("数组的长度为：" + arr.length);
+
+    //for循环可以遍历出没有值的元素
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+
+    //e是形参，接受的是数组遍历时的值
+    //forEach只会遍历有值的元素 
+    arr.forEach(function (e) {
+        console.log(e);
+    })
+
+    // ES6中引入了箭头函数的写法，类似于Java中的lambda表达式
+    arr.forEach((e) => {
+        console.log(e);
+    })
+
+    //push: ：可以添加多个元素到数组末尾
+    arr.push(7, 8, 9);
+    console.log(arr);
+
+    //splice: 删除元素
+    arr.splice(2, 2);
+    console.log(arr);
+
+</script>
+
+</html>

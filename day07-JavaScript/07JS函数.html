@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // 第一种定义格式
+    function add(a, b) {
+        return a + b;
+    }
+
+    // 函数的调用(函数没有被调用是不会执行的)
+    var result = add(10, 20);
+    alert(result);
+
+    // 第二种定义格式
+    var add = function (a, b) {
+        return a + b;
+    }
+
+    //函数调用(函数需要被调用才能执行)
+    var result = add(10, 20);
+    alert(result);
+
+    // 注意：函数调用可以传递多个参数，但是函数只会接受参数列表个参数
+    var result = add(10, 20, 30, 40);
+</script>
+
+</html>

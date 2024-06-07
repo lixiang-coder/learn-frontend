@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // ==：只比较值是否相等，不区分数据类型，哪怕类型不一致，==也会自动转换类型进行值得比较
+    // ===：不光比较值，还要比较类型，如果类型不一致，直接返回false
+    var age = 20;
+    var _age = "20";
+    var $age = 20;
+
+    alert(age == _age);     //true ，只比较值
+    alert(age === _age);    //false ，类型不一样
+    alert(age === $age);    //true ，类型一样，值一样
+
+
+    // 类型转换 - 其他类型转为数字
+    alert(parseInt("12")); //12
+    alert(parseInt("12A45")); //12
+    alert(parseInt("A45"));//NaN (not a number)
+
+
+    // 0、null、undefined、""、NaN理解成false,反之理解成true
+    if (0) { //false
+        alert("0 转换为false");
+    }
+
+    if ("") { //false
+        alert("/" / " 转换为false");
+    }
+
+    if (undefined) { //false
+        alert("undefined 转换为false");
+    }
+
+    if (NaN) { //false
+        alert("NaN 转换为false");
+    }
+
+    if (1) { //true
+        alert("除0和NaN其他数字都转为 true");
+    }
+</script>
+
+</html>
