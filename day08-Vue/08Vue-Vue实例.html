@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>创建一个Vue实例</title>
+    <!-- 这里引入开发版本 - 包含完整的注释和警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
 </head>
 
 <body>
     <!--
     创建Vue实例，初始化渲染
-    1. 准备容器
-    2. 引包（官网） — 开发版本/生产版本
-    3. 创建Vue实例  new Vue()
-    4. 指定配置项，渲染数据
-        1. el:指定挂载点
-        2. data提供数据
+        1. 准备容器
+        2. 引包（官网） — 开发版本/生产版本
+        3. 创建Vue实例  new Vue()
+        4. 指定配置项，渲染数据
+            1. el:指定挂载点
+            2. data提供数据
 -->
     <!-- 不是Vue管理的范围 -->
     <div class="box2">
@@ -24,16 +26,13 @@
         box -- {{ msg }}
     </div>
 
-    <!-- Vue所管理的范围 -->
+    <!-- 是Vue所管理的范围 -->
     <div id="app">
         <!-- 这里将来编写一些用于渲染的代码逻辑 -->
         <h1>{{ msg }}</h1>
         <a href="#">{{ count }}</a>
 
     </div>
-
-    <!-- 这里引入开发版本 - 包含完整的注释和警告 -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
 
     <script>
         // 一旦引入 VueJS核心包，在全局环境，就有了 Vue 构造函数
