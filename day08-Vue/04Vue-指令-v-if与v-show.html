@@ -23,7 +23,7 @@
         年龄<input type="text" v-model="age">经判定,为:
         <span v-show="age <= 35">年轻人(35及以下)</span>
         <span v-show="age > 35 && age < 60">中年人(35-60)</span>
-        <span v-show>老年人(60及以上)</span>
+        <span v-show="age >= 60">老年人(60及以上)</span>
     </div>
 </body>
 <script>
