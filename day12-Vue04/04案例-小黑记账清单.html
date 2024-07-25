@@ -156,7 +156,7 @@
       created() {
         // const res = await axios.get('https://applet-base-api-t.itheima.net/bill', {
         //   params: {
-        //     creator: '小黑'
+        //     creator: '小薛'
         //   }
         // })
         // this.list = res.data.data
@@ -206,7 +206,7 @@
         async getList() {
           const res = await axios.get('https://applet-base-api-t.itheima.net/bill', {
             params: {
-              creator: '小黑'
+              creator: '小薛'
             }
           })
           this.list = res.data.data
@@ -237,7 +237,7 @@
 
           // 发送添加请求
           const res = await axios.post('https://applet-base-api-t.itheima.net/bill', {
-            creator: '小黑',
+            creator: '小薛',
             name: this.name,
             price: this.price
           })

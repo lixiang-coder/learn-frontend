@@ -53,7 +53,7 @@
         console.log('updated 数据修改了，视图已经更新', document.querySelector('span').innerHTML)
       },
 
-      // 4. 卸载阶段
+      // 4. 卸载阶段，可以在浏览器控制台输入app.$destroy()，进行卸载
       beforeDestroy() {
         console.log('beforeDestroy, 卸载前')
         console.log('清除掉一些Vue以外的资源占用，定时器，延时器...')
