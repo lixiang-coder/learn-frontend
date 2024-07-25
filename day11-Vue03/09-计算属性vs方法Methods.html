@@ -73,6 +73,7 @@
 
       methods: {
         totalCountFn() {
+          // 需要几次执行几次
           console.log('methods方法执行了')
           let total = this.list.reduce((sum, item) => sum + item.num, 0)
           return total
@@ -83,6 +84,7 @@
         // 计算属性：有缓存的，一旦计算出来结果，就会立刻缓存
         // 下一次读取 → 直接读缓存就行 → 性能特别高
         // totalCount () {
+        //   只会执行一次
         //   console.log('计算属性执行了')
         //   let total = this.list.reduce((sum, item) => sum + item.num, 0)
         //   return total
