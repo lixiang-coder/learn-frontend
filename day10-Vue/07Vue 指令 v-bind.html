@@ -14,8 +14,8 @@
         <!-- 标签属性不能写插值表达式 -->
         <!-- <img src="{{imgUrl}}" alt=""> -->
 
-        <!-- 简写： v-bind:src   =>   :src -->
         <img v-bind:src="imgUrl" v-bind:title="msg" alt="">
+        <!-- 简写： v-bind:src   =>   :src -->
         <img :src="imgUrl" :title="msg" alt="">
     </div>
     <script>
