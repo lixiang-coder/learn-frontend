@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv">文本</div>
+</body>
+<script src="./js/jquery-3.7.1.js"></script>
+
+<script>
+    // Dom对象 → jquery对象
+    // 1.获取Dom对象
+    var domDiv = document.getElementById("mydiv");
+    // 2.利用$()方法进行包装即可
+    mydiv = $(domDiv);
+    console.log(mydiv);
+
+    // jquery对象 → Dom对象
+    // 1.获取jquery对象
+    var jqueryDiv = $('#mydiv');
+    // 2.获取包装集中指定下标的元素，将jquery对象转成dom对象
+    var dom = jqueryDiv[0];
+    console.log(dom)
+</script>
+</html>

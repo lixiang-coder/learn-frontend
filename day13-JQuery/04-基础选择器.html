@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mydiv1">id选择器1<span>span中的内容</span></div>
+    <div id="mydiv1" class="blue">元素选择器</div>
+    <span class="blue">样式选择器</span>
+</body>
+<script src="./js/jquery-3.7.1.js"></script>
+
+<script>
+    /*
+        基础选择器
+            id选择器        #id属性                 $("#id属性值")           选择id为指定值的元素对象（如果有多个同名id，则以第一个为准）
+            类选择器        .class属性值            $(".class属性值")        选择class为指定值的元素对象
+            元素选择器      标签名/元素名            $("标签名/元素名")        选择所有指定标签的元素对象
+
+            通用选择器      *                       $("*")                   选择页面中所有的元素对象
+            组合选择器      选择器1，选择器2         $("选择器1,选择器2")      选择指定选择器选中的元素对象
+    */
+
+    // id选择器          id的属性值
+    var mydiv = $("mydiv1")
+    console.log(mydiv)
+
+    // 类选择器          .class属性值
+    var clas = $(".blue")
+    console.log(clas)
+
+    // 元素选择器        标签名/元素名
+    var divs = $("div")
+    console.log(divs)
+
+    // 通用选择器       *
+    var all = $("*")
+    console.log(all)
+
+    // 组合选择器      选择器1，选择器2
+    var group = $("#mydiv1,div,.blue")
+    console.log(group)
+</script>
+
+
+</html>

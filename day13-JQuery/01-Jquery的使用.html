@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mydiv"></div>
+</body>
+<!--引入本地的jquery文件 
+        未引入则报错： $ is not defined
+    引入在线的jquery文件 
+        <head>
+            <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+            </script>
+        </head>
+-->
+<script src="./js/jquery-3.7.1.js"></script>
+
+<script>
+    // 第一种方式获取jquery对象
+    var jquery1 = jQuery('#mydiv')
+    console.log(jquery1)
+
+    // 第二种方式获取jquery对象
+    var jquery2 = $('#mydiv')
+    console.log(jquery2)
+</script>
+
+</html>
