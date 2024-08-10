@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .testcolor {
+        .testColor {
             background:green;
         }
         .gray {
@@ -34,6 +34,8 @@
             示例：  $("父元素 ~ 指定元素")
             选择父元素的下面所有指定元素
 -->
+            
+<script src="./js/jquery-3.7.1.js"></script>
 
 <body>
     <div id="parent">层次择器
@@ -42,14 +44,12 @@
             <img src="http://www.baidu.com/img/bd_logo1.png" width="270" height="129" />
             <img src="http://www.baidu.com/img/bd_logo1.png" width="270" height="129" />
         </div>
-        <p>p元素</p>
+        <!-- <p>p元素</p> -->
         <div>
             选择器2<div>选择器2中的div</div>
         </div>
     </div>
 </body>
-
-<script src="./js/jquery-3.7.1.js"></script>
 
 <script>
     // 后代选择器
@@ -60,7 +60,7 @@
     var zd = $("#parent > div")
     console.log(zd)
 
-    // 相邻选择器
+    // 相邻选择器：只会找和它相邻的标签是不是指定元素，不是则为空
     var xl = $("#child + div")
     console.log(xl)
 

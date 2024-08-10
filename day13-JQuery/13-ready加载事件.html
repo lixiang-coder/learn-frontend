@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.7.1.js"></script>
+</head>
+<script>
+    // console.log($("#p1"))    获取不到，因为代码是从上到下执行的
+    $(function(){
+        console.log("ready加载事件")
+    });
+
+    $(document).ready(function(){
+        // 获取元素
+        console.log("#p1")
+    });
+</script>
+
+<body>
+    <!-- 
+    ready加载事件
+        预加载事件
+        当页面的dom结构加载完毕后执行
+        类似于js中load事件
+        ready事件可以写多个
+        语法:
+            $(document).ready(function(){
+            
+            });
+        简写：
+            $(function(){
+            
+            });
+-->
+    <p id="p1">文本</p>
+</body>
+
+</html>
