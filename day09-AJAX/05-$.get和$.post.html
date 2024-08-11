@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$.get和$.post</title>
+    <script src="./js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <!--
+     $.get();
+            语法:
+                $.get("请求地址","请求参数",function(形参){
+                
+                })
+    $.post();
+            语法:
+                $.post("请求地址","请求参数",function(形参){
+                
+                })
+-->
+
+</body>
+<script>
+    $.get("./js/data.json", {}, function (data) {
+        console.log(data)
+    });
+
+    $.post("./js/data.json", {}, function (data) {
+        console.log(data)
+    })
+</script>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery使用ajax</title>
+    <script src="./js/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+    <!-- jquery调用ajax方法
+            格式：$.ajax({})
+            参数：
+                type:请求方式GET/PoST
+                url:请求地址ur1
+                async:是否异步，默认是true表示异步
+                data:发送到服务器的数据
+                dataType:预期服务器返回的数据类型
+                contentType:设置请求头
+                success:请求成功时调用此函数
+                error:请求失败时调用此函数 
+    -->
+    <button type="button" id="btn">点击我查看数据</button>
+</body>
+
+<script>
+    $.ajax({
+        type: "get",  // 请求方式，大小写都可以
+        url: "./js/data.txt",    // 请求地址
+        data: {  // 请求数据，json对象
+            //uname:"zhangsan"    // 前端给后端发送的请求参数，没有可不写
+        },
+        dataType: "JSON",    // 预期返回数据类型，如果是json格式，接受到返回值会自动封装成json对象
+        success: function (data) {     // data是形参名，代表的是返回的数据
+            console.log(data);      // 字符串
+            // 将字符串转为json对象，有了这个dataType，就不需要手动转了
+            // var obj = JSON.parse(data)
+            // console.log(obj)
+        }
+    });
+
+
+    $.ajax({
+        type: "get",  // 请求方式，大小写都可以
+        url: "./js/data.json",    // 请求地址
+        data: {  // 请求数据，json对象
+        },
+        dataType: "text",    // 预期返回数据类型，如果是json格式，接受到返回值会自动封装成json对象
+        success: function (data) {     // data是形参名，代表的是返回的数据
+            console.log(data);      // 字符串
+            // 将字符串转为json对象，有了这个dataType，就不需要手动转了
+            //var obj = JSON.parse(data)
+            //console.log(obj)
+        }
+    });
+
+
+    // 点击按钮，发送ajax请求，将数据显示到页面中
+    $("#btn").click(function () {
+        $.ajax({
+            type: "get",  // 请求方式，大小写都可以
+            url: "./js/data.json",    // 请求地址
+            data: {  // 请求数据，json对象
+            },
+            dataType: "json",    // 预期返回数据类型，如果是json格式，接受到返回值会自动封装成json对象
+            success: function (data) {     // data是形参名，代表的是返回的数据
+                // Dom操作 → 创建ul
+                var ul = $("<ul></ul>");
+                // 遍历返回的数据数组
+                for (let i = 0; i < data.length; i++) {
+                    // 得到数组中的每一个元素
+                    let user = data[i]
+                    // 创建li元素
+                    var li = "<li>" + user.userName + "</li>"
+                    // 将li元素设置到ul元素中
+                    ul.append(li)
+                }
+                console.log(ul)
+                // 将ul设置到body标签中
+                $("body").append(ul)
+            }
+        });
+    })
+
+</script>
+
+</html>
