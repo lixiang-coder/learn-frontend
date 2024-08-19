@@ -9,3 +9,5 @@
  2023-03-21](https://www.bilibili.com/video/BV1m84y1w7Tb/?spm_id_from=333.337.search-card.all.click&vd_source=e9ff78178dbc7c0aeb5a3435033a2b40)
   
 - [3小时带你玩转jQuery+Ajax（前端开发-从入门到精通）](https://www.bilibili.com/video/BV19L4y1v7Dy?p=1&vd_source=e9ff78178dbc7c0aeb5a3435033a2b40)
+
+- [黑马程序员SpringBoot3+Vue3全套视频教程，springboot+vue企业级全栈开发从基础、实战到面试一套通关 2023-11-01](https://www.bilibili.com/video/BV14z4y1N7pg?p=46&vd_source=e9ff78178dbc7c0aeb5a3435033a2b40)
