@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+    </div>
+
+    <!-- 没有被接管，所以不会生效 -->
+    <div>
+        <h1>{{msg}}</h1>
+    </div>
+
+</body>
+
+<script type="module">
+    import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+    createApp({
+        setup() {
+            const message = ref('Hello Vue!')
+            return {
+                // 定义的数据
+                msg: "hello world"
+            }
+        }
+    }).mount('#app')
+</script>
+
+</html>
